@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="body" class="body">
+  <header>
+    <img src="tic-tac-toe_7886622.png" alt="Tic Tac Toe Icon" />
+    <h1 style="margin-top: 3px ;margin-left: 20px;font-size: 40px;">Tic Tac Toe </h1>
+  </header>
+  <div class="container">
+    <div id="mode-selection">
+      <div>
+           <label for="mode" style="text-align: center;">Select Mode:</label>
+           <select id="mode">
+             <option value="solo">Solo (Computer vs Person)</option>
+             <option value="duo">Duo (Person vs Person)</option>
+           </select>
+           <div id="player-names">
+             <input type="text" id="player1-name" placeholder="Player 1 Name" />
+             <input type="text" id="player2-name" placeholder="Player 2 Name" style="display: none;" />
+           </div>
+      </div>
+      <div>
+           <label for="board-size">Select Board Size:</label>
+           <input type="number" id="board-size" min="3" max="10" value="3" />
+           <div style="margin-left: 35px ;margin-top: 15px;">
+           <button onclick="startGame()" id="button">Start Game</button>
+           </div>
+      </div>
+    </div>
+    <div id="game" style="display: none">
+      <div class="game-info">
+        <div id="turn-indicator">Turn: Player X</div>
+        <div id="leaderboard">
+          <span id="player1">Player 1: 0</span>
+          <span id="player2">Player 2: 0</span>
+        </div>
+      </div>
+      <div class="br">
+        <div id="board" class="board"></div>
+      </div>
+      <div class="xe">
+        <div id="result" class="result"></div>
+        <div class="re">
+          <button onclick="resetScores()">Reset Scores</button>
+          <button onclick="reset()">Reset Game</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
